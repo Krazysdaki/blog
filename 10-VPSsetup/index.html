@@ -3,34 +3,19 @@
 <head>
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<!-- <title>Knect 的博客</title> -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 <meta name="description" content="一个谜的一堆谜"/>
 <meta name="keywords" content="一个谜的一堆谜"/>
-
 <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 <link rel="shortcut icon" href="https://iknect.me/favicon.ico">
-
 <link rel="stylesheet" href="https://iknect.me/styles/main.css">
-
 <!-- Modernizr JS -->
-<script src="https://iknect.me/media/scripts/modernizr-2.6.2.min.js"></script>
-<!-- FOR IE9 below -->
-<!--[if lt IE 9]>
-<scripts src="https://iknect.me/media/scripts/respond.min.js"></scripts>
-<![endif]-->
-
+<script src="https://cdn.staticfile.org/modernizr/2.6.2/modernizr.min.js"></script>
 <!-- Comment -->
-
-
 
 <!-- katex -->
 <!--<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet">-->
-
-<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-
+<link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css" rel="stylesheet">
 
 
     <title>10 （自用）新开 VPS 主机配置一条龙 - Knect 的博客</title>
@@ -72,9 +57,7 @@
             
         </ul>
     </div>
-
     <div class="fh5co-menu">
-
         <!-- 标签 -->
         <div class="fh5co-box">
             <a href="https://iknect.me/tags/"><h3 class="heading">👉标签</h3></a>
@@ -100,7 +83,6 @@
         </div>
     </div>
 </div>
-
 <header id="fh5co-header">
     <div class="container-fluid">
         <div class="row">
@@ -145,11 +127,6 @@
     </div>
 </header>
 
-
-    <!--  <a href="#" class="fh5co-post-prev"><span>👈 Prev</span></a>-->
-    <!--  <a href="#" class="fh5co-post-next"><span>Next 👉</span></a>-->
-
-    <!-- 等gridea出自定义页面功能再优化一下 -->
     
         <div class="container-fluid">
     <div class="row fh5co-post-entry single-entry">
@@ -170,7 +147,7 @@
             </span>
             <h2 class="fh5co-article-title animate-box">10 （自用）新开 VPS 主机配置一条龙</h2>
             <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
-                <li>2018-07-29</li>
+                <li>2018-07-29, 16:30:50</li>
                 <li>805字</li>
                 <li>4 min read</li>
             </ol>
@@ -293,7 +270,7 @@ bash /etc/init.d/rcloned start
 
                 <div class="row">
     <div class="col-md-12 animate-box">
-        
+                    <div class="valine-container"></div>
     </div>
 </div>
 
@@ -304,8 +281,66 @@ bash /etc/init.d/rcloned start
 </div>
 
     
+    <!-- jQuery -->
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- img lazy load -->
+<script src="https://cdnjs.loli.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+<!-- jQuery Easing -->
+<script src="https://cdnjs.loli.net/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<!-- Bootstrap -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="https://cdn.staticfile.org/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+<!-- Main JS -->
+<script src="https://iknect.me/media/scripts/main.js"></script>
+<!-- Md5 Min JS -->
+<script src="https://iknect.me/media/scripts/md5.min.js"></script>
+<!-- katex -->
+<!--<script src="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.js"></script>-->
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+<script src="/media/scripts/Valine.min.js"></script>
+<script type="application/javascript">
+    hljs.initHighlightingOnLoad();
+    $(function () {
+        $("img.lazy").lazyload({
+            effect: "fadeIn",  // 懒加载动画
+            threshold: 180  // 在图片距离屏幕180px时提前载入
+        });
+        jQuery('[data-toggle="tooltip"]').tooltip();
+        $('#tool-toc').click(function () {
+            $('.post-toc').toggle();
+        });
+    });
+    
+</script>
 
-    <!-- 返回顶部 -->
+
+    
+        <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+        <script>
+            new Valine({
+                av: AV, 
+                el: '.valine-container',
+                emoticon_url: 'https://iknect.me/images/alu',
+                emoticon_list: ["击掌.png","献花.png","害羞.png","献黄瓜.png","口水.png","惊喜.png","喷血.png","吐血倒地.png",
+                "狂汗.png","欢呼.png","高兴.png","喜极而泣.png","不说话.png","脸红.png","汗.png","坐等.png","不高兴.png",
+                "中刀.png","皱眉.png","小眼睛.png","中指.png","尴尬.png","瞅你.png","想一想.png","中枪.png","得意.png",
+                "肿包.png","扇耳光.png","亲亲.png","吐.png","无所谓.png","便便.png","愤怒.png","蜡烛.png","内伤.png",
+                "投降.png","观察.png","看不见.png","抠鼻.png","邪恶.png","看热闹.png","抽烟.png","锁眉.png","装大款.png",
+                "吐舌.png","无奈.png","长草.png","赞一个.png","呲牙.png","无语.png","阴暗.png","不出所料.png","咽气.png",
+                "期待.png","哭泣.png","黑线.png","喷水.png","深思.png","鼓掌.png","暗地观察.png"],
+                app_id: '6v4OuSH2D5bIkmCAIcd9ADxQ-gzGzoHsz',
+                app_key: 'bIj1fgfi3H03gujB8xNyxwd2',
+                admin_email: 'pdly@live.cn',
+                placeholder: '\\(≧▽≦)/你想说什么呢'
+            });
+        </script>
+    
+    
+    
+
+
+
     <div class="back-to-top">
     
         <a href="#!" id="tool-toc" class="hidden-xs hidden-sm">
@@ -315,7 +350,6 @@ bash /etc/init.d/rcloned start
     
     <a href="#top" class="hidden-xs hidden-sm"><i class="fa fa-paper-plane"></i></a>
 </div>
-
 <div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
     <ul class="markdownIt-TOC">
 <li>
@@ -339,58 +373,11 @@ bash /etc/init.d/rcloned start
 
 </div>
 
-
     
 <footer id="fh5co-footer">
-  <p>© 2020 Knect 的博客 <br/>
+  <p>© 2020 Knect 的博客. All Rights Reserved. <br/>
 由 <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> & <a href="https://github.com/GalaxySuze/gridea-theme-space" target="_blank">Space</a> 轻快驱动</p>
 </footer>
-
-
-    <!-- jQuery -->
-<script src="https://iknect.me/media/scripts/jquery.min.js"></script>
-<!-- img lazy load -->
-<script src="https://iknect.me/media/scripts/jquery.lazyload.min.js"></script>
-<!-- jQuery Easing -->
-<script src="https://iknect.me/media/scripts/jquery.easing.1.3.js"></script>
-<!-- Bootstrap -->
-<script src="https://iknect.me/media/scripts/bootstrap.min.js"></script>
-<!-- Waypoints -->
-<script src="https://iknect.me/media/scripts/jquery.waypoints.min.js"></script>
-<!-- Main JS -->
-<script src="https://iknect.me/media/scripts/main.js"></script>
-<!-- Md5 Min JS -->
-<script src="https://iknect.me/media/scripts/md5.min.js"></script>
-<!-- katex -->
-<!--<script src="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.js"></script>-->
-<!-- highlight -->
-<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
-
-
-<script type="application/javascript">
-    // 代码高亮
-    hljs.initHighlightingOnLoad();
-
-    // img 懒加载
-    $(function () {
-        $("img.lazy").lazyload({
-            effect: "fadeIn",  // 懒加载动画
-            threshold: 180  // 在图片距离屏幕180px时提前载入
-        });
-        // tooltip
-        $('[data-toggle="tooltip"]').tooltip();
-
-        // 目录
-        $('#tool-toc').click(function () {
-            $('.post-toc').toggle();
-        });
-    });
-
-    
-</script>
-
-
-
 
 </body>
 </html>
