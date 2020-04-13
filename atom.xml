@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iknect.me</id>
     <title>Knect 的博客</title>
-    <updated>2020-04-13T05:28:03.519Z</updated>
+    <updated>2020-04-13T05:37:51.180Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iknect.me"/>
     <link rel="self" href="https://iknect.me/atom.xml"/>
@@ -68,13 +68,6 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[【RIP】沉痛悼念金庸大师，博客黑白一周]]></title>
-        <id>https://iknect.me/jinyong/</id>
-        <link href="https://iknect.me/jinyong/">
-        </link>
-        <updated>2018-10-30T11:50:50.000Z</updated>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[16 如何在生活环境中的垃圾制度里获取自己的利益]]></title>
         <id>https://iknect.me/16-get-benefits-from-bad-environment/</id>
         <link href="https://iknect.me/16-get-benefits-from-bad-environment/">
@@ -94,6 +87,17 @@
         <summary type="html"><![CDATA[<p>使用 panjunwen 大佬修改的 Valine。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>使用 panjunwen 大佬修改的 Valine。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[14 我，我自己，和我父亲]]></title>
+        <id>https://iknect.me/14-me-myself-and-my-father/</id>
+        <link href="https://iknect.me/14-me-myself-and-my-father/">
+        </link>
+        <updated>2018-08-26T14:15:01.000Z</updated>
+        <summary type="html"><![CDATA[<p>没有预览文字XD</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>没有预览文字XD</p>
 ]]></content>
     </entry>
 </feed>
