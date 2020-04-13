@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://iknect.me</id>
+    <title>Knect 的博客</title>
+    <updated>2020-04-13T05:06:04.219Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://iknect.me"/>
+    <link rel="self" href="https://iknect.me/atom.xml"/>
+    <subtitle>一个谜的一堆谜</subtitle>
+    <logo>https://iknect.me/images/avatar.png</logo>
+    <icon>https://iknect.me/favicon.ico</icon>
+    <rights>All rights reserved 2020, Knect 的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[难以存活 - 1904]]></title>
+        <id>https://iknect.me/1904/</id>
+        <link href="https://iknect.me/1904/">
+        </link>
+        <updated>2019-09-12T14:02:02.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[二月失魂，三月仿佛 - 1903]]></title>
+        <id>https://iknect.me/1903/</id>
+        <link href="https://iknect.me/1903/">
+        </link>
+        <updated>2019-04-02T14:02:02.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[又是一年考试季 - 1902]]></title>
+        <id>https://iknect.me/1902/</id>
+        <link href="https://iknect.me/1902/">
+        </link>
+        <updated>2019-01-15T10:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2019 Wish & To-do List - 1901]]></title>
+        <id>https://iknect.me/1901/</id>
+        <link href="https://iknect.me/1901/">
+        </link>
+        <updated>2019-01-01T15:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[19 一年又一年 ]]></title>
+        <id>https://iknect.me/19-years-go-by/</id>
+        <link href="https://iknect.me/19-years-go-by/">
+        </link>
+        <updated>2018-12-22T07:06:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[18 华莱士（西式快餐）（二）：大叔]]></title>
+        <id>https://iknect.me/18-making-money-2/</id>
+        <link href="https://iknect.me/18-making-money-2/">
+        </link>
+        <updated>2018-11-06T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>记第一次打工/兼职经历</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>记第一次打工/兼职经历</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[17 华莱士（西式快餐）（一）]]></title>
+        <id>https://iknect.me/17-making-money/</id>
+        <link href="https://iknect.me/17-making-money/">
+        </link>
+        <updated>2018-11-05T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>记第一次打工/兼职经历</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>记第一次打工/兼职经历</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【RIP】沉痛悼念金庸大师，博客黑白一周]]></title>
+        <id>https://iknect.me/jinyong/</id>
+        <link href="https://iknect.me/jinyong/">
+        </link>
+        <updated>2018-10-30T11:50:50.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[16 如何在生活环境中的垃圾制度里获取自己的利益]]></title>
+        <id>https://iknect.me/16-get-benefits-from-bad-environment/</id>
+        <link href="https://iknect.me/16-get-benefits-from-bad-environment/">
+        </link>
+        <updated>2018-09-27T14:59:50.000Z</updated>
+        <summary type="html"><![CDATA[<p>一群思维固化的领导人洋洋自得的傻逼制度。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一群思维固化的领导人洋洋自得的傻逼制度。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[15 静态博客的最佳评论系统：Deserts 改版 Valine]]></title>
+        <id>https://iknect.me/15-build-up-comments/</id>
+        <link href="https://iknect.me/15-build-up-comments/">
+        </link>
+        <updated>2018-09-20T14:59:50.000Z</updated>
+        <summary type="html"><![CDATA[<p>使用 panjunwen 大佬修改的 Valine。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>使用 panjunwen 大佬修改的 Valine。</p>
+]]></content>
+    </entry>
+</feed>

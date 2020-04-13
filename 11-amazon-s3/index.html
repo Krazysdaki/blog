@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- <title>Knect 的博客</title> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="description" content="一个谜的一堆谜"/>
+<meta name="keywords" content="一个谜的一堆谜"/>
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel="shortcut icon" href="https://iknect.me/favicon.ico">
+
+<link rel="stylesheet" href="https://iknect.me/styles/main.css">
+
+<!-- Modernizr JS -->
+<script src="https://iknect.me/media/scripts/modernizr-2.6.2.min.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+<scripts src="https://iknect.me/media/scripts/respond.min.js"></scripts>
+<![endif]-->
+
+<!-- Comment -->
+
+
+
+<!-- katex -->
+<!--<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet">-->
+
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+
+
+
+    <title>11 在 Amazon S3 对象存储上搭建静态博客并利用 CloudFront 和 Amazon 颁发的免费证书添加 SSL 加密 - Knect 的博客</title>
+</head>
+<body>
+    <div id="fh5co-offcanvas">
+    <a href="#!" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
+        <span><i class="icon-cross3"></i> <span>Close</span></span>
+    </a>
+    <div class="fh5co-bio">
+        <figure>
+            <img src="https://iknect.me/images/avatar.png" alt="Knect 的博客"
+                 class="img-responsive">
+        </figure>
+        <a href="https://iknect.me/post/about/"><h3 class="heading">ABOUT ME</h3></a>
+        <h2>Knect 的博客</h2>
+        <p>一个谜的一堆谜</p>
+        <ul class="fh5co-social">
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="fh5co-menu">
+
+        <!-- 标签 -->
+        <div class="fh5co-box">
+            <a href="https://iknect.me/tags/"><h3 class="heading">👉标签</h3></a>
+            <ul>
+                
+                    <li><a href="https://iknect.me/tag/Owwh3mi-0/">生活</a></li>
+                
+                    <li><a href="https://iknect.me/tag/0UX8Q6f5W/">flag</a></li>
+                
+                    <li><a href="https://iknect.me/tag/T3-WvHPcql/">丧</a></li>
+                
+                    <li><a href="https://iknect.me/tag/PcaUYvi6v4/">九九计划</a></li>
+                
+                    <li><a href="https://iknect.me/tag/pb_uUzm_rC/">折腾</a></li>
+                
+                    <li><a href="https://iknect.me/tag/0yfG9QovcU/">悼念</a></li>
+                
+                    <li><a href="https://iknect.me/tag/ogeVvi8y-H/">思维</a></li>
+                
+                    <li><a href="https://iknect.me/tag/3kLqxV9jrp/">博客</a></li>
+                
+                    <li><a href="https://iknect.me/tag/XvPJ6_P-Q6/">工具</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<header id="fh5co-header">
+    <div class="container-fluid">
+        <div class="row">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <ul class="fh5co-social">
+                
+                    <li>
+                        <a href="https://iknect.me"
+                        
+                        >
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://iknect.me/archives"
+                        
+                           target="_blank"
+                                
+                        >
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://iknect.me/tags"
+                        
+                           target="_blank"
+                                
+                        >
+                            标签
+                        </a>
+                    </li>
+                
+            </ul>
+            <div class="col-lg-12 col-md-12 text-center">
+                <h1 id="fh5co-logo">
+                    <a href="https://iknect.me">Knect 的博客 </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <!--  <a href="#" class="fh5co-post-prev"><span>👈 Prev</span></a>-->
+    <!--  <a href="#" class="fh5co-post-next"><span>Next 👉</span></a>-->
+
+    <!-- 等gridea出自定义页面功能再优化一下 -->
+    
+        <div class="container-fluid">
+    <div class="row fh5co-post-entry single-entry">
+        <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+            <figure class="animate-box">
+                
+                    <img src="http://yanxuan.nosdn.127.net/4552d7ba24c3f6cfaa62f8f965dcf0fd.png" alt="11 在 Amazon S3 对象存储上搭建静态博客并利用 CloudFront 和 Amazon 颁发的免费证书添加 SSL 加密" class="img-responsive">
+                
+            </figure>
+            <span class="fh5co-meta animate-box">
+                
+                    <div class="tag-container">
+                        
+                            <a href="https://iknect.me/tag/pb_uUzm_rC/" class="tag">折腾, </a>
+                        
+                            <a href="https://iknect.me/tag/3kLqxV9jrp/" class="tag">博客, </a>
+                        
+                    </div>
+                
+            </span>
+            <h2 class="fh5co-article-title animate-box">11 在 Amazon S3 对象存储上搭建静态博客并利用 CloudFront 和 Amazon 颁发的免费证书添加 SSL 加密</h2>
+            <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
+                <li>2018-08-05</li>
+                <li>3947字</li>
+                <li>18 min read</li>
+            </ol>
+
+            <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
+                <div class="row">
+                    <div class="col-md-12 animate-box post-content">
+                        <p> <p>没有预览文字XD</p>
+<!-- more -->
+<p>~</p>
+<p><strong>这是九九计划</strong><br>
+<strong>第 <font color=coral>09</font> 篇</strong></p>
+<p>~</p>
+<h2 id="前言">前言</h2>
+<p><strong>2018年8月26日更新：简易 <code>bat</code> 一键更新博客</strong></p>
+<p>之前博客是托管在 CloudCone 的 VPS 主机上的，最近发现他家的网络炸得厉害，有点难受，故一直在找合适的页面托管。<br>
+知道静态博客能搭建在 Github 等上，但是有点担心会翻车。<br>
+前几天突发奇想搜了下能不能在大名鼎鼎的 <code>Amazon S3</code> 上搭建静态博客，结果发现还真的可以~<br>
+刚好免费一年套餐还有效，遂说干就干。<br>
+途中想办法给博客加上 HTTPS 支持，发现 CloudFront 还提供全球分发 CDN ，对于博客而言价格还不高，喜滋滋~<br>
+踩了一点小坑，出现了一些问题，在这里记录一下~</p>
+<hr>
+<h2 id="静态博客">静态博客</h2>
+<p>简单理解为，纯 html 页面，不需要后台支持，可以直接渲染输出的博客。<br>
+现在可以用的静态博客程序很多有很多，就不一一列举，搜索即可。<br>
+我就以我在用的名不见经传的 Ink 纸小墨 为例，其他大同小异~</p>
+<p><strong>InkPaper</strong><br>
+<a href="https://github.com/InkProject/ink">Github InkProject</a><br>
+<a href="https://www.chole.io/">纸小墨 主页</a></p>
+<hr>
+<h2 id="博客程序环境">博客程序环境</h2>
+<p>Linux macOS Windows 都可，我之前是在 Linux VPS 主机上搭建，但是成本稍高。其实程序环境在哪都无所谓，能生成页面然后上传到 S3 上就行~<br>
+那么反而是自己的本地环境最为方便，还免去了服务器成本，美滋滋的。</p>
+<p>以 Windows 为例，直接访问上面的 博客程序主页 ，下载 Windows 版本的程序压缩包。<br>
+打开压缩包发现包含一个 <code>blog</code> 文件夹以及一个 <code>ink.exe</code> 程序文件。<br>
+直接解压放到自己想放博客文件地方，例如 <code>D:\Blog</code>，怎么用呢？</p>
+<p><code>ink.exe</code> 是一个命令行程序，需要在 CMD 或者 PowerShell 中使用。</p>
+<p>比如你的博客目录结构是这样的：</p>
+<figure data-type="image" tabindex="1"><img src="https://ws1.sinaimg.cn/large/006xA1mJgy1ftwmf6vkhpj30ho0sswgi.jpg" alt="目录结构图" loading="lazy"></figure>
+<p>那么可在 BLOG 文件夹内按住 <code>Shift</code> + <code>右键</code> ，点击弹出菜单内的 <code>在此处打开 PowerShell 窗口</code> ，<br>
+输入 <code>.\ink serve</code> ，然后复制 <code>http://localhost:8000/</code> 到浏览器窗口打开，就可以看到博客的样子啦~</p>
+<p>看到的实际上是 <code>~\blog\public</code> 下的内容，而自己用 MarkDown格式 写作的博客文章放置在 \sourse 文件夹下。<br>
+经过 <code>.\ink build</code> or <code>.\ink preview</code> or <code>.\ink serve</code> 命令，ink程序将 .md 文件转换为 html 静态网页。<br>
+也就是说，自己的博客网页本质上是在 public 这个文件夹下。</p>
+<p>更多命令操作和文章格式请参阅： <a href="http://www.chole.io/blog/ink-blog-tool.html">简洁的静态博客构建工具 —— 纸小墨（InkPaper）</a><br>
+刚刚的预览界面也有相同的一篇文章~</p>
+<hr>
+<h2 id="在-s3-上渲染输出">在 S3 上渲染输出</h2>
+<p>这一步相当简单了~<br>
+首先注册一个 AWS 账号，重要的是需要绑定一张 信用卡 。<br>
+稍微有点门槛的~<br>
+你会有一年的免费套餐~<br>
+最好有一个域名，可以 Google 一下免费域名。暂时没有也没关系，不影响这一步。</p>
+<p>登陆控制台： <a href="https://ap-southeast-1.console.aws.amazon.com/console/home?region=ap-southeast-1#">https://ap-southeast-1.console.aws.amazon.com/console/home?region=ap-southeast-1#</a></p>
+<p>选择 S3 ，点击创建存储桶。创建过程中除了名称和区域，其他的在创建之后还可以随时更改。<br>
+名称填你准备的域名，如： <code>blog.my.cc</code> 。<br>
+存储区域国内最好选东京或新加坡，然后点击下一步。</p>
+<figure data-type="image" tabindex="2"><img src="https://ws1.sinaimg.cn/large/006xA1mJgy1ftwn70ym0aj30qg0q30uf.jpg" alt="" loading="lazy"></figure>
+<p>第二页可以不用理会，直接点击下一步。</p>
+<p>在第三页 <strong>管理公共权限</strong> 下拉选择 <strong>为此存储桶授予公共读取权限</strong> ，否则无法显示博客。</p>
+<p>下一页，点击 <strong>创建存储桶</strong> 。</p>
+<p>接下来点击刚才创建好的存储桶，选择 <strong>属性-静态网站托管</strong> ，选中 <strong>使用此存储桶托管网站</strong> ，<br>
+在索引文档处填下 <code>index.html</code> ，确定保存。</p>
+<p>前期准备就完成了。</p>
+<p>点击 <strong>概述-上传</strong> 然后打开博客文件夹下 <code>public</code> 文件夹，选中全部，直接拖到浏览器界面</p>
+<p>点击下一步，选择公开权限，上传即可。</p>
+<p>这个时候，再打开刚才选择静态网站托管的位置，点击 <strong>终端节点</strong> 后边的地址，就能看到自己的博客了~</p>
+<p>若有域名，在 DNS 管理处添加一个 CNAME 记录到这个地址，就 OJBK 了~</p>
+<p>http 博客已经在 S3 上托管成功~</p>
+<p>什么？每次打开浏览器这样上传太麻烦？好吧，我们用 rclone 来使上传工作简单一些~</p>
+<hr>
+<h2 id="用-rclone-简化上传操作">用 rclone 简化上传操作</h2>
+<p>--<br>
+<strong>2018年8月26日更新</strong><br>
+完成下面的操作之后，在<code>ink.exe</code>所在目录新建一个文本文档，输入类似内容：</p>
+<pre><code class="language-batch">.\ink build  
+rclone copy D:\Blog\blog\public\ s3:blog.my.cc  
+pause  
+</code></pre>
+<h2 id="保存为-blogbat-或者-一键更新博客bat以后写完博客扔到-sourse-文件夹里再双击运行这个-bat-就搞定一切啦~">保存为 <code>blog.bat</code> 或者 <code>一键更新博客.bat</code>，以后写完博客扔到 <code>sourse</code> 文件夹里，再双击运行这个 <code>bat</code> 就搞定一切啦~</h2>
+<p>每次都打开浏览器，打开 S3 控制台来上传文章确实有点麻烦，我们可以利用 rclone 来简化上传过程。<br>
+在这其中我也踩了一些坑，记录下来。</p>
+<p>官网下载 rclone ：<a href="https://rclone.org/downloads/">https://rclone.org/downloads/</a></p>
+<p>解压，将 rclone.exe 扔到 <code>C:\Windows\system32</code> 中。</p>
+<p>打开 CMD 或 PowerShell ，输入 <code>rclone config</code> ，显示：</p>
+<pre><code class="language-bash">No remotes found - make a new one  
+n) New remote  
+s) Set configuration password  
+q) Quit config  
+n/s/q&gt;  
+</code></pre>
+<p>输入 n ，回车，输入名字，如 s3 ，回车，显示：</p>
+<pre><code class="language-bash">Type of storage to configure.  
+Choose a number from below, or type in your own value  
+ 1 / Alias for a existing remote  
+   \ &quot;alias&quot;  
+ 2 / Amazon Drive  
+   \ &quot;amazon cloud drive&quot;  
+ 3 / Amazon S3 Compliant Storage Providers (AWS, Ceph, Dreamhost, IBM COS, Minio)  
+   \ &quot;s3&quot;  
+ 4 / Backblaze B2  
+   \ &quot;b2&quot;  
+[以下折叠]  
+</code></pre>
+<p>输入 3 ，回车，显示：</p>
+<pre><code class="language-bash">Choose your S3 provider.  
+Choose a number from below, or type in your own value  
+ 1 / Amazon Web Services (AWS) S3  
+   \ &quot;AWS&quot;  
+ 2 / Ceph Object Storage  
+   \ &quot;Ceph&quot;  
+ 3 / Digital Ocean Spaces  
+   \ &quot;DigitalOcean&quot;  
+ 4 / Dreamhost DreamObjects  
+   \ &quot;Dreamhost&quot;  
+ 5 / IBM COS S3  
+   \ &quot;IBMCOS&quot;  
+ 6 / Minio Object Storage  
+   \ &quot;Minio&quot;  
+ 7 / Wasabi Object Storage  
+   \ &quot;Wasabi&quot;  
+ 8 / Any other S3 compatible provider  
+   \ &quot;Other&quot;  
+provider&gt;  
+</code></pre>
+<p>输入 1 ，回车，显示：</p>
+<pre><code class="language-bash">Get AWS credentials from runtime (environment variables or EC2/ECS meta data if no env vars). Only applies if access_key_id and secret_access_key is blank.  
+Choose a number from below, or type in your own value  
+ 1 / Enter AWS credentials in the next step  
+   \ &quot;false&quot;  
+ 2 / Get AWS credentials from the environment (env vars or IAM)  
+   \ &quot;true&quot;  
+env_auth&gt;  
+</code></pre>
+<p>输入 1 ，回车，显示：</p>
+<pre><code class="language-bash">AWS Access Key ID - leave blank for anonymous access or runtime credentials.  
+access_key_id&gt;  
+</code></pre>
+<p>这个时候需要打开 <a href="https://console.aws.amazon.com/iam/home?region=ap-southeast-1#/home">Amazon IAM</a> ，选择 <strong>用户</strong> ，<strong>添加用户</strong>，随便一个用户名，选择 <strong>编程访问</strong> ，下一步。<br>
+选中 <strong>直接附加现有策略</strong> ，在 <em>筛选策略</em> 后的搜索框搜索 <strong>s3</strong> ，回车。<br>
+选中 <strong>AmazonS3FullAccess</strong> 前的复选框然后下一步，最后点击 <strong>创建用户</strong><br>
+可以将接下来这个页面的密钥 ID 和密钥复制保存一下。<br>
+复制 <strong>访问密钥ID</strong> 到 CMD 或 PowerShell 粘贴，回车，显示：</p>
+<pre><code class="language-bash">AWS Secret Access Key (password) - leave blank for anonymous access or runtime credentials.  
+secret_access_key&gt;  
+</code></pre>
+<p>回到浏览器点击 <strong>私有访问密钥</strong> 的显示，将密钥复制，照样粘贴，回车，显示：</p>
+<pre><code class="language-bash">Region to connect to.  
+Choose a number from below, or type in your own value  
+   / The default endpoint - a good choice if you are unsure.  
+ 1 | US Region, Northern Virginia or Pacific Northwest.  
+   | Leave location constraint empty.  
+   \ &quot;us-east-1&quot;  
+   / US East (Ohio) Region  
+ 2 | Needs location constraint us-east-2.  
+   \ &quot;us-east-2&quot;  
+   / US West (Oregon) Region  
+ 3 | Needs location constraint us-west-2.  
+   \ &quot;us-west-2&quot;   
+   / US West (Northern California) Region  
+ 4 | Needs location constraint us-west-1.  
+   \ &quot;us-west-1&quot;  
+   / Canada (Central) Region  
+ 5 | Needs location constraint ca-central-1.  
+   \ &quot;ca-central-1&quot;  
+   / EU (Ireland) Region  
+ 6 | Needs location constraint EU or eu-west-1.  
+   \ &quot;eu-west-1&quot;  
+   / EU (London) Region  
+ 7 | Needs location constraint eu-west-2.  
+   \ &quot;eu-west-2&quot;  
+   / EU (Frankfurt) Region  
+ 8 | Needs location constraint eu-central-1.  
+   \ &quot;eu-central-1&quot;  
+   / Asia Pacific (Singapore) Region  
+ 9 | Needs location constraint ap-southeast-1.  
+   \ &quot;ap-southeast-1&quot;  
+   / Asia Pacific (Sydney) Region  
+10 | Needs location constraint ap-southeast-2.  
+   \ &quot;ap-southeast-2&quot;  
+   / Asia Pacific (Tokyo) Region  
+11 | Needs location constraint ap-northeast-1.  
+   \ &quot;ap-northeast-1&quot;  
+   / Asia Pacific (Seoul)  
+12 | Needs location constraint ap-northeast-2.  
+   \ &quot;ap-northeast-2&quot;  
+   / Asia Pacific (Mumbai)  
+13 | Needs location constraint ap-south-1.  
+   \ &quot;ap-south-1&quot;  
+   / South America (Sao Paulo) Region  
+14 | Needs location constraint sa-east-1.  
+   \ &quot;sa-east-1&quot;  
+region&gt;  
+</code></pre>
+<p>输入 9 ，回车，显示：</p>
+<pre><code class="language-bash">Endpoint for S3 API.  
+Leave blank if using AWS to use the default endpoint for the region.  
+endpoint&gt;  
+</code></pre>
+<p>直接留空回车，显示：</p>
+<pre><code class="language-bash">Location constraint - must be set to match the Region. Used when creating buckets only.  
+Choose a number from below, or type in your own value  
+ 1 / Empty for US Region, Northern Virginia or Pacific Northwest.  
+   \ &quot;&quot;  
+ 2 / US East (Ohio) Region.  
+   \ &quot;us-east-2&quot;  
+ 3 / US West (Oregon) Region.  
+   \ &quot;us-west-2&quot;  
+ 4 / US West (Northern California) Region.  
+   \ &quot;us-west-1&quot;  
+ 5 / Canada (Central) Region.  
+   \ &quot;ca-central-1&quot;  
+ 6 / EU (Ireland) Region.  
+   \ &quot;eu-west-1&quot;  
+ 7 / EU (London) Region.  
+   \ &quot;eu-west-2&quot;  
+ 8 / EU Region.  
+   \ &quot;EU&quot;  
+ 9 / Asia Pacific (Singapore) Region.  
+   \ &quot;ap-southeast-1&quot;  
+10 / Asia Pacific (Sydney) Region.  
+   \ &quot;ap-southeast-2&quot;  
+11 / Asia Pacific (Tokyo) Region.  
+   \ &quot;ap-northeast-1&quot;  
+12 / Asia Pacific (Seoul)  
+   \ &quot;ap-northeast-2&quot;  
+13 / Asia Pacific (Mumbai)  
+   \ &quot;ap-south-1&quot;  
+14 / South America (Sao Paulo) Region.  
+   \ &quot;sa-east-1&quot;  
+location_constraint&gt;  
+</code></pre>
+<p>输入 9 ，回车，显示：</p>
+<pre><code class="language-bash">Canned ACL used when creating buckets and/or storing objects in S3.  
+For more info visit https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl  
+Choose a number from below, or type in your own value  
+ 1 / Owner gets FULL_CONTROL. No one else has access rights (default).  
+   \ &quot;private&quot;  
+ 2 / Owner gets FULL_CONTROL. The AllUsers group gets READ access.  
+   \ &quot;public-read&quot;  
+   / Owner gets FULL_CONTROL. The AllUsers group gets READ and WRITE access.  
+ 3 | Granting this on a bucket is generally not recommended.  
+   \ &quot;public-read-write&quot;  
+ 4 / Owner gets FULL_CONTROL. The AuthenticatedUsers group gets READ access.  
+   \ &quot;authenticated-read&quot;  
+   / Object owner gets FULL_CONTROL. Bucket owner gets READ access.  
+ 5 | If you specify this canned ACL when creating a bucket, Amazon S3 ignores it.  
+   \ &quot;bucket-owner-read&quot;  
+   / Both the object owner and the bucket owner get FULL_CONTROL over the object.  
+ 6 | If you specify this canned ACL when creating a bucket, Amazon S3 ignores it.  
+   \ &quot;bucket-owner-full-control&quot;  
+acl&gt;  
+</code></pre>
+<p>输入 2 ，回车，显示：</p>
+<pre><code class="language-bash">The server-side encryption algorithm used when storing this object in S3.  
+Choose a number from below, or type in your own value  
+ 1 / None  
+   \ &quot;&quot;  
+ 2 / AES256  
+   \ &quot;AES256&quot;  
+server_side_encryption&gt;  
+</code></pre>
+<p>输入 1 ，回车，显示：</p>
+<pre><code class="language-bash">The storage class to use when storing objects in S3.  
+Choose a number from below, or type in your own value  
+ 1 / Default  
+   \ &quot;&quot;  
+ 2 / Standard storage class  
+   \ &quot;STANDARD&quot;  
+ 3 / Reduced redundancy storage class  
+   \ &quot;REDUCED_REDUNDANCY&quot;  
+ 4 / Standard Infrequent Access storage class  
+   \ &quot;STANDARD_IA&quot;  
+ 5 / One Zone Infrequent Access storage class  
+   \ &quot;ONEZONE_IA&quot;  
+storage_class&gt;  
+</code></pre>
+<p>输入 1 或 2 ，回车，显示：</p>
+<pre><code class="language-bash">Remote config  
+--------------------  
+[s3]  
+type = s3  
+provider = AWS  
+env_auth = false  
+access_key_id = XXX  
+secret_access_key = YYY  
+region = us-east-1  
+endpoint =   
+location_constraint =  
+acl = private  
+server_side_encryption =  
+storage_class =  
+--------------------  
+y) Yes this is OK  
+e) Edit this remote  
+d) Delete this remote  
+y/e/d&gt;  
+</code></pre>
+<p>输入 y ，回车，再输入 q ，回车退出。</p>
+<p>s3 的连接配置就完成了。</p>
+<p>在 cmd 输入 <code>rclone lsd s3:</code> 应当就能看到你的存储桶了~</p>
+<p>日后更新博文：</p>
+<ul>
+<li>将写好的博文放入 source 文件夹</li>
+<li>在 Blog 下打开 PowerShell ，输入 <code>.\ink build</code> ，回车</li>
+<li>输入 <code>rclone copy D:\Blog\blog\public\ s3:blog.my.cc</code> ，回车</li>
+</ul>
+<p>三步走，就 OJBK 了~<br>
+注意更改其中的信息为你自己的（以及使用英文状态下的符号），<code>D:\Blog\blog\public\</code>  为你本地的public文件夹位置， <code>s3:blog.my.cc</code> 为 <em>远端名字</em>:存储桶名称 。</p>
+<hr>
+<h2 id="利用-aws-的-cloudfront-服务给博客添加-ssl">利用 AWS 的 CloudFront 服务给博客添加 SSL</h2>
+<p>有两个方式 申请 Amazon 颁发的免费证书或者导入你自己申请的证书。</p>
+<p>在控制台界面， <strong>服务-网络和内容分发</strong> 下可找到。这项服务和 <strong>Route 53</strong> 服务是配套的（至少在 AWS 体系里是配套的），不过 Route 53 在这篇文章中用不到。</p>
+<figure data-type="image" tabindex="3"><img src="https://ws1.sinaimg.cn/large/006xA1mJgy1ftz5zgbqwrj31gw0rltfi.jpg" alt="" loading="lazy"></figure>
+<p>但是点开之后（或许）会发现…… AWS 说注册已完成正在审核，要你等待……<br>
+几个小时或者更久后会收到 AWS 的一封电子邮件，读过才发现，<br>
+要使用 CloudFront 和 Route 53 ， AWS 还设了另外一道门槛——重新验证信用卡，并通过邮件要求你：</p>
+<ol>
+<li>提供一个 <strong>Businesses URL</strong></li>
+<li>用这个 URL 相关的邮箱发送</li>
+<li>并在该邮件中包含相关联的 AWS 账户 ID 或邮箱</li>
+<li>该账户应已添加有效的付款方式</li>
+</ol>
+<p>这是一个坑，我用了两天才通过了验证。我第一次发邮件，对方回了同样的信息，提了同样的要求……仿佛没看到我的邮件。</p>
+<figure data-type="image" tabindex="4"><img src="https://ws1.sinaimg.cn/large/006xA1mJgy1ftz5xb5373j30rh0hlq4b.jpg" alt="" loading="lazy"></figure>
+<p>第二次我直接回那封邮件，久久没回复，发现那邮件地址是加了 + 号的一长串，好吧，我又给原地址发了一封，总算通过了。<br>
+Business URL 可以直接给我们的博客，没有问题。<br>
+域名邮箱也很简单，腾讯企业邮箱、网易企业邮箱等，国内的解决方案一大把，若是不放心国内的服务，也可使用 Yandex 、 Zoho等国外的服务。<br>
+我在邮箱这耽误了蛮久……不够干脆利落。<br>
+然后直接在邮件里指出自己的 AWS 账号的邮箱，由于之前申请 AWS 账号就已经绑定信用卡，也可直说，于是<br>
+用 name@yourdominan.com 给 aws-verification@amazon.com 发送以下内容：</p>
+<pre><code>主题 ： CloudFront And Route 53  
+正文 ： Businesses URL: http://blog.pdly.men  
+		Associate AWS Account: name@yourdominan.com  
+		Non-prepaid payment method:  
+			A visa Card ( or a China UnionPay Card ) was added to name@yourdominan.com  
+</code></pre>
+<p>或者客气点：</p>
+<pre><code>主题 ： CloudFront And Route 53  
+正文 ： 
+
+Hello,there,  
+
+I have received your email saying that I have not been granted access to Amazon Route 53 or CloudFront.  
+
+Your requirements:  
+
+Businesses URL: http://blog.pdly.men  
+Associate AWS Account: name@yourdominan.com  
+Non-prepaid payment method:  
+	A visa Card ( or a China UnionPay Card ) was added to name@yourdominan.com  
+
+Please help me get access to CloudFront and Amazon Route 53.  
+
+</code></pre>
+<p>或许需要一两天，或者重发几次，应该问题不大。通过之后 AWS 会发邮件说通过了。<br>
+这时候已经可以打开 CloudFront 页面，不过不急，<br>
+在控制台界面找到 <strong>Certificate Manager</strong> ，右上角切换区域到 <strong>弗吉尼亚北部</strong> ，点击 <strong>预置证书</strong> 下的 <strong>开始使用</strong> 。<br>
+到下一个页面，点 <strong>导入证书</strong>，可导入自己的证书，点 <strong>请求证书</strong> 可申请 Amazon 的证书。</p>
+<p>然后可能会遇上第二个坑，<font color=red><strong>自定义证书导入无法识别证书链</strong></font>，有几率遇上。<br>
+我申请的 Alpha SSL 各种姿势导入都没通过， Trust Asia 随便就通过了（甚至格式都不是按照 AWS 要求的格式），很是诡异，所以推荐申请 Amazon 的证书。<br>
+Amazon 的证书在这里有很多好处，时长 13 个月，如果申请的域名一直能打开（ping、tcping）， Amazon 还能给你自动续期，很舒心。<br>
+不过申请这个也有坑——给你一个 CNAME 记录，不要傻乎乎地就填上去，要去除一点东西。</p>
+<p>假如申请 <code>blog.my.cc</code> 的，他给你的记录是 <code>XXXXXXXXXXXX.blog.my.cc</code> ，只要在 DNS 那边填 <code>XXXXXXXXXXXX.blog</code> 就行，否则无法通过验证。（为傻乎乎的我哭泣）</p>
+<p>注意 Amazon 的证书没法导出在除 AWS 的地方使用。<br>
+其他按照步骤走就行。</p>
+<p>接下来打开 CloudFront ，发现没有中文界面了。<br>
+点击 <strong>Create Disrtibution</strong> ，在 <strong>Web</strong> 项下点击 <strong>Get Start</strong> ，<br>
+点击 <strong>Origin Domain Name</strong> 后的输入框就能选中你的存储桶，按照下图操作：</p>
+<figure data-type="image" tabindex="5"><img src="https://ws1.sinaimg.cn/large/006xA1mJgy1ftz6mpvaq6j310o0pswi1.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://ws1.sinaimg.cn/large/006xA1mJgy1ftz6o7sr7jj30u60p4wgx.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://ws1.sinaimg.cn/large/006xA1mJgy1ftz6qadcdcj315f0o5ady.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://ws1.sinaimg.cn/large/006xA1mJgy1ftz6rl9y8oj30pz0olmz8.jpg" alt="" loading="lazy"></figure>
+<p>最后点击 <strong>Create Disrtibution</strong><br>
+将博客域名 CNAME 到下图中的地址，等待 STATUS 变为 Deployed 即可</p>
+<figure data-type="image" tabindex="9"><img src="https://ws1.sinaimg.cn/large/006xA1mJgy1ftz6vl94bwj30he0a3gmq.jpg" alt="" loading="lazy"></figure>
+<p>一个 https 静态博客就这么搞定了，美滋滋啊~<br>
+但是，如果想长期做博客，免费期过了之后，花销是多大呢？ AWS 这么大的公司，花销应该很大吧！<br>
+然而我要告诉你，真的很便宜——每个月 5 块钱都算多了~</p>
+<hr>
+<h2 id="免费期外在-amazon-s3-的月花费真的很少">免费期外在 Amazon S3 的月花费——真的很少！</h2>
+<p>AWS 计费是很复杂，不过 AWS 提供了一个 <strong>简单月度成本结算器</strong> ，可以用来估算一下成本。<br>
+我们的花销只在 S3 和 CloudFront 上，所以在这里只看这两项就可以了。<br>
+夸大一个小博客的各项数据，结果如图：</p>
+<figure data-type="image" tabindex="10"><img src="https://ws1.sinaimg.cn/large/006xA1mJgy1ftz799c8jcj318v0mrq6e.jpg" alt="" loading="lazy"></figure>
+<p>哈哈哈，忍不住笑出声来。</p>
+<hr>
+<h2 id="总结">总结</h2>
+<p>把 静态博客 搬迁到 Amazon S3 上是一个骚操作——既提供了低延迟访问，价格又低到接近于无。<br>
+Amazon S3 实在是静态博客的最佳选择。</p>
+<p>另外，添加 CloudFront 和 SSL 之后， ping 值会稍高（10ms左右）于未加 SSL 的，影响不大，自行考虑。</p>
+<hr>
+<p>ＴＨＥ－ＥＮＤ</p>
+ </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        
+                            <div class="next-post">
+                                <div class="next">下一篇</div>
+                                <a href="https://iknect.me/10-VPSsetup/">
+                                    <h3 class="post-title">
+                                        10 （自用）新开 VPS 主机配置一条龙
+                                    </h3>
+                                </a>
+                            </div>
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+    <div class="col-md-12 animate-box">
+        
+    </div>
+</div>
+
+            </div>
+
+        </article>
+    </div>
+</div>
+
+    
+
+    <!-- 返回顶部 -->
+    <div class="back-to-top">
+    
+        <a href="#!" id="tool-toc" class="hidden-xs hidden-sm">
+            <i class="fa fa-map"></i>
+        </a>
+        <br>
+    
+    <a href="#top" class="hidden-xs hidden-sm"><i class="fa fa-paper-plane"></i></a>
+</div>
+
+<div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2">静态博客</a></li>
+<li><a href="#%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F%E7%8E%AF%E5%A2%83">博客程序环境</a></li>
+<li><a href="#%E5%9C%A8-s3-%E4%B8%8A%E6%B8%B2%E6%9F%93%E8%BE%93%E5%87%BA">在 S3 上渲染输出</a></li>
+<li><a href="#%E7%94%A8-rclone-%E7%AE%80%E5%8C%96%E4%B8%8A%E4%BC%A0%E6%93%8D%E4%BD%9C">用 rclone 简化上传操作</a></li>
+<li><a href="#%E4%BF%9D%E5%AD%98%E4%B8%BA-blogbat-%E6%88%96%E8%80%85-%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2bat%E4%BB%A5%E5%90%8E%E5%86%99%E5%AE%8C%E5%8D%9A%E5%AE%A2%E6%89%94%E5%88%B0-sourse-%E6%96%87%E4%BB%B6%E5%A4%B9%E9%87%8C%E5%86%8D%E5%8F%8C%E5%87%BB%E8%BF%90%E8%A1%8C%E8%BF%99%E4%B8%AA-bat-%E5%B0%B1%E6%90%9E%E5%AE%9A%E4%B8%80%E5%88%87%E5%95%A6~">保存为 <code>blog.bat</code> 或者 <code>一键更新博客.bat</code>，以后写完博客扔到 <code>sourse</code> 文件夹里，再双击运行这个 <code>bat</code> 就搞定一切啦~</a></li>
+<li><a href="#%E5%88%A9%E7%94%A8-aws-%E7%9A%84-cloudfront-%E6%9C%8D%E5%8A%A1%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0-ssl">利用 AWS 的 CloudFront 服务给博客添加 SSL</a></li>
+<li><a href="#%E5%85%8D%E8%B4%B9%E6%9C%9F%E5%A4%96%E5%9C%A8-amazon-s3-%E7%9A%84%E6%9C%88%E8%8A%B1%E8%B4%B9%E7%9C%9F%E7%9A%84%E5%BE%88%E5%B0%91">免费期外在 Amazon S3 的月花费——真的很少！</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+    
+<footer id="fh5co-footer">
+  <p>© 2020 Knect 的博客 <br/>
+由 <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> & <a href="https://github.com/GalaxySuze/gridea-theme-space" target="_blank">Space</a> 轻快驱动</p>
+</footer>
+
+
+    <!-- jQuery -->
+<script src="https://iknect.me/media/scripts/jquery.min.js"></script>
+<!-- img lazy load -->
+<script src="https://iknect.me/media/scripts/jquery.lazyload.min.js"></script>
+<!-- jQuery Easing -->
+<script src="https://iknect.me/media/scripts/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="https://iknect.me/media/scripts/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="https://iknect.me/media/scripts/jquery.waypoints.min.js"></script>
+<!-- Main JS -->
+<script src="https://iknect.me/media/scripts/main.js"></script>
+<!-- Md5 Min JS -->
+<script src="https://iknect.me/media/scripts/md5.min.js"></script>
+<!-- katex -->
+<!--<script src="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.js"></script>-->
+<!-- highlight -->
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+
+
+<script type="application/javascript">
+    // 代码高亮
+    hljs.initHighlightingOnLoad();
+
+    // img 懒加载
+    $(function () {
+        $("img.lazy").lazyload({
+            effect: "fadeIn",  // 懒加载动画
+            threshold: 180  // 在图片距离屏幕180px时提前载入
+        });
+        // tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // 目录
+        $('#tool-toc').click(function () {
+            $('.post-toc').toggle();
+        });
+    });
+
+    
+</script>
+
+
+
+
+</body>
+</html>
