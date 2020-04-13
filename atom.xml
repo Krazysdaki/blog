@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iknect.me</id>
     <title>Knect 的博客</title>
-    <updated>2020-04-13T09:50:40.748Z</updated>
+    <updated>2020-04-13T17:26:44.162Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iknect.me"/>
     <link rel="self" href="https://iknect.me/atom.xml"/>
@@ -51,10 +51,6 @@
         <link href="https://iknect.me/18-making-money-2/">
         </link>
         <updated>2018-11-06T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>记第一次打工/兼职经历</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>记第一次打工/兼职经历</p>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[17 华莱士（西式快餐）（一）]]></title>
@@ -62,10 +58,6 @@
         <link href="https://iknect.me/17-making-money/">
         </link>
         <updated>2018-11-05T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>记第一次打工/兼职经历</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>记第一次打工/兼职经历</p>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[16 如何在生活环境中的垃圾制度里获取自己的利益]]></title>
@@ -73,10 +65,6 @@
         <link href="https://iknect.me/16-get-benefits-from-bad-environment/">
         </link>
         <updated>2018-09-27T14:59:50.000Z</updated>
-        <summary type="html"><![CDATA[<p>一群思维固化的领导人洋洋自得的傻逼制度。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>一群思维固化的领导人洋洋自得的傻逼制度。</p>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[15 静态博客的最佳评论系统：Deserts 改版 Valine]]></title>
@@ -84,10 +72,6 @@
         <link href="https://iknect.me/15-build-up-comments/">
         </link>
         <updated>2018-09-20T14:59:50.000Z</updated>
-        <summary type="html"><![CDATA[<p>使用 panjunwen 大佬修改的 Valine。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>使用 panjunwen 大佬修改的 Valine。</p>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[14 我，我自己，和我父亲]]></title>
@@ -95,9 +79,5 @@
         <link href="https://iknect.me/14-me-myself-and-my-father/">
         </link>
         <updated>2018-08-26T14:15:01.000Z</updated>
-        <summary type="html"><![CDATA[<p>没有预览文字XD</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>没有预览文字XD</p>
-]]></content>
     </entry>
 </feed>

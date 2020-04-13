@@ -30,7 +30,7 @@
             <img src="https://iknect.me/images/avatar.png" alt="Knect 的博客"
                  class="img-responsive">
         </figure>
-        <a href="https://iknect.me/post/about/"><h3 class="heading">ABOUT ME</h3></a>
+        <a href="https://iknect.me/about/"><h3 class="heading">ABOUT ME</h3></a>
         <h2>Knect 的博客</h2>
         <p>一个谜的一堆谜</p>
         <ul class="fh5co-social">
@@ -90,6 +90,22 @@
             <ul class="fh5co-social">
                 
                     <li>
+                        <a href="https://iknect.me/movies"
+                        
+                        >
+                            观影
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://iknect.me/books"
+                        
+                        >
+                            阅读
+                        </a>
+                    </li>
+                
+                    <li>
                         <a href="https://iknect.me"
                         
                         >
@@ -117,6 +133,10 @@
                         </a>
                     </li>
                 
+                <p></p>
+                <form id="gridea-search-form" data-update="1586794906223" action="/search/">
+                    <input class="gridea-search-input" autocomplete="off" spellcheck="false" name="q">
+                </form>
             </ul>
             <div class="col-lg-12 col-md-12 text-center">
                 <h1 id="fh5co-logo">
@@ -150,16 +170,14 @@
             <h2 class="fh5co-article-title animate-box">11 在 Amazon S3 对象存储上搭建静态博客并利用 CloudFront 和 Amazon 颁发的免费证书添加 SSL 加密</h2>
             <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
                 <li>2018-08-05, 22:50:40</li>
-                <li>3947字</li>
+                <li>3940字</li>
                 <li>18 min read</li>
             </ol>
 
             <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
                 <div class="row">
                     <div class="col-md-12 animate-box post-content">
-                        <p> <p>没有预览文字XD</p>
-<!-- more -->
-<p>~</p>
+                        <p> <p>~</p>
 <p><strong>这是九九计划</strong><br>
 <strong>第 <font color=coral>09</font> 篇</strong></p>
 <p>~</p>
@@ -222,14 +240,15 @@
 <p>什么？每次打开浏览器这样上传太麻烦？好吧，我们用 rclone 来使上传工作简单一些~</p>
 <hr>
 <h2 id="用-rclone-简化上传操作">用 rclone 简化上传操作</h2>
-<p>--<br>
+<p>·--------------------------------------<br>
 <strong>2018年8月26日更新</strong><br>
 完成下面的操作之后，在<code>ink.exe</code>所在目录新建一个文本文档，输入类似内容：</p>
 <pre><code class="language-batch">.\ink build  
 rclone copy D:\Blog\blog\public\ s3:blog.my.cc  
 pause  
 </code></pre>
-<h2 id="保存为-blogbat-或者-一键更新博客bat以后写完博客扔到-sourse-文件夹里再双击运行这个-bat-就搞定一切啦~">保存为 <code>blog.bat</code> 或者 <code>一键更新博客.bat</code>，以后写完博客扔到 <code>sourse</code> 文件夹里，再双击运行这个 <code>bat</code> 就搞定一切啦~</h2>
+<p>保存为 <code>blog.bat</code> 或者 <code>一键更新博客.bat</code>，以后写完博客扔到 <code>sourse</code> 文件夹里，再双击运行这个 <code>bat</code> 就搞定一切啦~<br>
+·---------------------------------------</p>
 <p>每次都打开浏览器，打开 S3 控制台来上传文章确实有点麻烦，我们可以利用 rclone 来简化上传过程。<br>
 在这其中我也踩了一些坑，记录下来。</p>
 <p>官网下载 rclone ：<a href="https://rclone.org/downloads/">https://rclone.org/downloads/</a></p>
@@ -653,7 +672,6 @@ Amazon S3 实在是静态博客的最佳选择。</p>
 <li><a href="#%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F%E7%8E%AF%E5%A2%83">博客程序环境</a></li>
 <li><a href="#%E5%9C%A8-s3-%E4%B8%8A%E6%B8%B2%E6%9F%93%E8%BE%93%E5%87%BA">在 S3 上渲染输出</a></li>
 <li><a href="#%E7%94%A8-rclone-%E7%AE%80%E5%8C%96%E4%B8%8A%E4%BC%A0%E6%93%8D%E4%BD%9C">用 rclone 简化上传操作</a></li>
-<li><a href="#%E4%BF%9D%E5%AD%98%E4%B8%BA-blogbat-%E6%88%96%E8%80%85-%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2bat%E4%BB%A5%E5%90%8E%E5%86%99%E5%AE%8C%E5%8D%9A%E5%AE%A2%E6%89%94%E5%88%B0-sourse-%E6%96%87%E4%BB%B6%E5%A4%B9%E9%87%8C%E5%86%8D%E5%8F%8C%E5%87%BB%E8%BF%90%E8%A1%8C%E8%BF%99%E4%B8%AA-bat-%E5%B0%B1%E6%90%9E%E5%AE%9A%E4%B8%80%E5%88%87%E5%95%A6~">保存为 <code>blog.bat</code> 或者 <code>一键更新博客.bat</code>，以后写完博客扔到 <code>sourse</code> 文件夹里，再双击运行这个 <code>bat</code> 就搞定一切啦~</a></li>
 <li><a href="#%E5%88%A9%E7%94%A8-aws-%E7%9A%84-cloudfront-%E6%9C%8D%E5%8A%A1%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0-ssl">利用 AWS 的 CloudFront 服务给博客添加 SSL</a></li>
 <li><a href="#%E5%85%8D%E8%B4%B9%E6%9C%9F%E5%A4%96%E5%9C%A8-amazon-s3-%E7%9A%84%E6%9C%88%E8%8A%B1%E8%B4%B9%E7%9C%9F%E7%9A%84%E5%BE%88%E5%B0%91">免费期外在 Amazon S3 的月花费——真的很少！</a></li>
 <li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>

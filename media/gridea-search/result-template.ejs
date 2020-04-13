@@ -1,0 +1,23 @@
+<div class="container-fluid">
+<div class="row fh5co-post-entry">
+  <% posts.forEach(function(post) { %>
+    <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box" style="height: 25em;">
+      <figure class="img-box">
+      <a href="<%= post.link %>">
+          <img data-original="<%= post.feature %>" alt="<%= post.title %>" class="img-responsive img-rounded lazy" src='<%= post.feature %>'>
+      </a>
+      </figure>
+      <div class="post-info">
+      <h4 class="fh5co-article-title">
+        <a href="<%= post.link %>"><%= post.title %></a>
+      </h4>
+      <span class="fh5co-meta fh5co-date"><%= post.dateFormat %></span>
+      </div>
+      <div class="post-abstract">
+        <%- post.searchedPreview %>
+      </div>
+    </article>
+  <% }); %>
+  <div class="clearfix visible-lg-block visible-md-block visible-sm-block visible-xs-block"></div>  
+</div>
+</div>
